@@ -9,16 +9,22 @@
     <title>Scramble</title>
   </head>
   <body>
-    <img class = background src="collage3.jpg" alt =hints >
-    
+    <img class = background src="collage2.jpg" alt =hints >
     <div class= "container">
       <h1>Scramble of Country Names </h1>
-     <div class="input">
+           <div class="input">
         <p class = "word"></p>
-      <input type="text"  placeholder="Enter country name"> <!--the input box for the answer.placeholder to expect the what kind of input is expected-->
-        <div class = buttons>
-        <button class ="Submit">Submit </button>
-        <button class="Reset">Reset</button>
+      <input type = "text" id = "userinput"  placeholder="Enter country name"> <!--the input box for the answer.placeholder to expect the what kind of input is expected-->
+       <div class="levelsbutton">
+          <button class="easy"  id="easybutton"  img src="collage3.jpg" alt = change>EASY</button>
+          <button class="medium" id="mediumbutton">MEDIUM</button>
+          <button class="hard"  id="hardbutton">HARD</button>
+          <p class = "selectedLevel"></p>
+      <div class = buttons>
+        <button class ="Submit" id="enter">SUBMIT </button>        
+        <button class = "Refresh">REFRESH</button>
+       <button class="Reset">RESET</button>
+        <!-- <button type ="button" onClick ="window.location.reload()">RESET </button>  can declare in html too reset the complete game/refresh the page -->
       </div>
     </div>
     </div>

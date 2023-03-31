@@ -1,6 +1,6 @@
-/**{
+*{
     box-sizing: border-box;
-}*/
+}
 body{
     background-color: aqua;
         display:flex;
@@ -19,7 +19,7 @@ color:red;
 }
 .container{
     background-color:lightgray; 
-    top:30%;
+    top:20%;
     padding:20px;
     position:absolute;
     text-align:center;
@@ -29,12 +29,17 @@ color:red;
     font-size:30px;
     letter-spacing:24px;
 }
-.input{
-    margin:25px 20px 35px /*need to check*/
+.userinput{
+    margin: 30px 20px 35px /*need to check*/
 }
 .buttons{
-    border-radius: 15px;
+    border-radius: 20px;
     padding:15px;
     text-align: space-between;
 /* display:inline-block;*/
   }
+ .levelsbutton{
+    border-radius: 15px;
+    padding:15px;
+    text-align: space-between;
+ } 
