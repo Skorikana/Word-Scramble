@@ -53,21 +53,25 @@ function game() {                 //initialising a function:game and using math.
     let text = event.target.innerHTML;          //event.target gives us access to the DOM element the user clicked.
     currentLevel = text;                        //console.log(text);//console.log(currentLevel);
     if(currentLevel == "EASY"){                         
-      winRule.innerHTML = "Get 6 right to Win";
+      winRule.innerHTML = "Get 6 right in a row to Win";
     }
     else if(currentLevel == "MEDIUM"){
-      winRule.innerHTML = "Get 12 right to Win";
+      winRule.innerHTML = "Get 12 right in a row to Win";
     }
     else if(currentLevel == "HARD"){
-      winRule.innerHTML = "Get 24 right to Win";
+      winRule.innerHTML = "Get 24 right in a row to Win";
     }
   }
 
-
+// Submit function to know whether the userinputs are correct or wrong 
   function submit(){
-  let userinput = document.getElementById("userinput").value; //To know what the user has given in the textbox when user clicked on the submit button
+    if(currentLevel == ""){                      //When the user did not select any level and clicks submit it would pop up that they need to selct first inorder for the gae to start.
+      alert("Please Select Level First");
+      return;
+    }
+  let userinput = document.getElementById("userinput").value; //Accessing the userinput to know what the user has given in the textbox when user clicked on the submit button
    //console.log("userinput")
-    if(userinput== ''){                 
+    if(userinput == ''){                 
      alert("Uh -Oh!! Its Empty..Please enter the word");      //if the user-input is empty it would pop up a message 
     }
     else if(userinput.toLowerCase() == result.toLowerCase()){   //userinput would be considered even its in both lower aswell as uppercase
@@ -82,30 +86,30 @@ function game() {                 //initialising a function:game and using math.
            game();
             }
    else {                                               
-    sucess=0;       //the score board sets back to 0  once the user answers 1 question wrong and game starts again.           
-    alert("Hmm.. Looks like "+ userinput.toUpperCase() + "  is Wrong...Try Again!!");   //highlighted in uppercase so dat user can identify what exactly he typed. 
+    sucess=0;       //the score board sets back to 0  once the user answers a question wrong and game starts again.           
+    alert("Hmm.. Looks like "+ userinput.toUpperCase() + "  is Wrong...You loose!!");   //highlighted in uppercase so dat user can identify what exactly he typed. 
    }
   
    document.getElementById("userinput").value = "";      // to clear the user input textbox after comparisons/validations
   }
 
 
-   //accessing the  level buttons..
+   //Accessing the  level buttons..
 
     const easyBtn = document.getElementById("easybutton");        
     const mediumBtn = document.getElementById("mediumbutton");
     const hardBtn = document.querySelector(".hard");
 
-   //accessing background image as it needs to be changed for all the three levels 
+   //Accessing background image as it needs to be changed for all the three levels 
     const bgImg = document.querySelector("background");
 
-    
+
     easyBtn.addEventListener("click" ,buttonClick);                //calling buttonClick func to know which level user has selected
     easyBtn.addEventListener("click" ,function onClick(event){     
     document.getElementById("chooseLevel").style.display = "none"; //once the user has choosen level..the h2 tag display is hidden to display the scrambled word
       mediumBtn.disabled = true;  
       hardBtn.disabled =true;
-    document.body.style.backgroundImage ="url\('easy.jpg')"});
+    document.body.style.backgroundImage ="url\('easy2.png')"});
                        
 
    mediumBtn.addEventListener("click" ,buttonClick);
@@ -113,7 +117,7 @@ function game() {                 //initialising a function:game and using math.
     easyBtn.disabled = true;
     hardBtn.disabled = true;
    document.getElementById("chooseLevel").style.display = "none";
-   document.body.style.backgroundImage ="url\('medium.jpg')"});
+   document.body.style.backgroundImage ="url\('medium.png')"});
 
 
     hardBtn.addEventListener("click" ,buttonClick);
