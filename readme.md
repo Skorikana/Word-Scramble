@@ -37,8 +37,6 @@ HTML, CSS, JAVASCRIPT
 1. Adding Animations and Sound<br>
 
 ## SAMPLE IMAGES:
-<br>
-![exampleimage](https://user-images.githubusercontent.com/126014468/229966180-bc0f6c42-309c-46b2-bf62-2deb6e44b3ae.png)
 
 <br>
 
